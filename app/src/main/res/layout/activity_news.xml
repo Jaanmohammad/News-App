@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.NewsActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/readFullNews">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"/>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@color/title"
+                android:layout_margin="10sp"
+                android:layout_below="@+id/image"/>
+            <TextView
+                android:id="@+id/subDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sub Description"
+                android:textColor="@color/subTitle"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:layout_margin="10sp"
+                android:layout_below="@+id/title"/>
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Content"
+                android:textSize="15sp"
+                android:layout_margin="10sp"
+                android:layout_below="@+id/subDescription"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/readFullNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Read Full News"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:background="@drawable/button_background"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
